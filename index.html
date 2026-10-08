@@ -1,0 +1,199 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Little Message 💕</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      overflow: hidden;
+      font-family: "Trebuchet MS", sans-serif;
+
+      /* Put your Naruto background image here */
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)),
+        url("naruto-background.jpg") center/cover no-repeat;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      text-align: center;
+      padding: 50px 70px;
+      border-radius: 30px;
+
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 40px rgba(255, 120, 180, 0.5);
+
+      animation: appear 2s ease;
+    }
+
+    h1 {
+      color: white;
+      font-size: clamp(45px, 8vw, 90px);
+      text-shadow:
+        0 0 10px #ff5fa2,
+        0 0 25px #ff5fa2,
+        0 0 45px #ff2f86;
+
+      animation: heartbeat 2s infinite;
+    }
+
+    .subtitle {
+      color: white;
+      font-size: 22px;
+      margin-top: 15px;
+      letter-spacing: 3px;
+    }
+
+    .heart {
+      font-size: 50px;
+      margin-top: 20px;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    /* Falling flowers */
+    .flower {
+      position: fixed;
+      top: -50px;
+      font-size: 30px;
+      animation: fall linear infinite;
+      pointer-events: none;
+    }
+
+    .flower:nth-child(1) {
+      left: 5%;
+      animation-duration: 7s;
+    }
+
+    .flower:nth-child(2) {
+      left: 20%;
+      animation-duration: 10s;
+      animation-delay: 2s;
+    }
+
+    .flower:nth-child(3) {
+      left: 40%;
+      animation-duration: 8s;
+      animation-delay: 1s;
+    }
+
+    .flower:nth-child(4) {
+      left: 60%;
+      animation-duration: 11s;
+      animation-delay: 3s;
+    }
+
+    .flower:nth-child(5) {
+      left: 80%;
+      animation-duration: 9s;
+      animation-delay: 2s;
+    }
+
+    .flower:nth-child(6) {
+      left: 95%;
+      animation-duration: 12s;
+      animation-delay: 4s;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.08);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: scale(0.7);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .click-message {
+      margin-top: 25px;
+      color: white;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Falling flowers -->
+  <div class="flower">🌸</div>
+  <div class="flower">🌺</div>
+  <div class="flower">🌸</div>
+  <div class="flower">🌺</div>
+  <div class="flower">🌸</div>
+  <div class="flower">🌺</div>
+
+  <!-- Main greeting -->
+  <div class="container">
+    <h1>I like you ❤️</h1>
+
+    <div class="subtitle">
+      🌸 More than you probably know 🌸
+    </div>
+
+    <div class="heart">
+      💕
+    </div>
+
+    <div class="click-message">
+      Made with a little courage ✨
+    </div>
+  </div>
+
+</body>
+</html>
+```
